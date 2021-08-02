@@ -5,12 +5,13 @@
 }
 
 img.icon {
-  height: 10rem;
+  height: 8rem;
 }
 
 fieldset {
   margin-top: 0.8rem;
+  align-items: center;
   display: flex;
-  width: fit-content;
+  width: 48rem;
   padding: 1.5rem;
 }
