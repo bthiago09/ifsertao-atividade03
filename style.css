@@ -1,0 +1,16 @@
+* {
+  margin: 0.2rem;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img.icon {
+  height: 10rem;
+}
+
+fieldset {
+  margin-top: 0.8rem;
+  display: flex;
+  width: fit-content;
+  padding: 1.5rem;
+}
