@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
+
+    <!--   FONTS     -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Preencha o formulário</h1>
+    <h1>Preencha o formulário:</h1>
     <form>
       <div>
-        <fieldset>
-          <legend><strong>Dados pessoais</strong></legend>
-          <img src="/assets/icons/user.png" alt="user" class="icon grid" />
-          <div>
-            <div>
-              <label for="nome">Nome:</label>
-              <input
-                type="text"
-                name="nome"
-                placeholder="Digite seu nome"
-                required
-              />
-            </div>
-            <div>
-              <label for="nascimento">Nascimento:</label>
-              <input type="date" name="data_nasc" required />
-            </div>
-            <div>
-              <label for="sexo">Sexo:</label>
-              <input type="radio" name="sexo" value="Masculino" required />
-              Masculino
-              <input type="radio" name="sexo" value="Feminino" required />
-              Feminino
-            </div>
-            <div>
-              <div>
-                <label for="formacao">Formação:</label>
+        <fieldset style="width: 810px">
+          <legend><b>Dados pessoais</b></legend>
+          <table>
+            <tr>
+              <td rowspan="5">
+                <img src="/assets/icons/user.png" alt="user" width="100px" />
+              </td>
+              <td>Nome:</td>
+              <td>
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Digite seu nome"
+                  class="caixag"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Nascimento:</td>
+              <td><input type="date" class="caixap" required /></td>
+            </tr>
+            <tr>
+              <td>Sexo:</td>
+              <td>
+                <input type="radio" name="sexo" value="masculino" required />
+                Masculino
+                <input type="radio" name="sexo" value="feminino" required />
+                Feminino
+              </td>
+            </tr>
+            <tr>
+              <td>Formação:</td>
+              <td>
                 <select>
-                  <option value="Fundamental Completo">Fundamental</option>
-                  <option value="Ensino médio Completo">Ensino médio</option>
-                  <option value="Ensino Superior Completo">
-                    Ensino superior
-                  </option>
+                  <option value="fundamental">Fundamental Completo</option>
+                  <option value="medio">Médio Completo</option>
+                  <option value="superior">Superior Completo</option>
                 </select>
-                <label for="profissao">Profissão:</label>
+              </td>
+              <td>Profissão:</td>
+              <td>
                 <input
                   list="profissoes"
                   name="profissao"
@@ -58,89 +70,115 @@
                   <option value="Profissão 3"></option>
                   <option value="Profissão 4"></option>
                 </datalist>
-              </div>
-              <div>
-                <label for="cpf">CPF:</label>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF:</td>
+              <td>
                 <input
                   type="text"
                   maxlength="14"
                   placeholder="Ex: 111.222.333-44"
                   required
+                  class="caixap"
+                  required
                 />
-              </div>
-          </div>
+              </td>
+            </tr>
+          </table>
         </fieldset>
       </div>
       <div>
-        <fieldset>
-          <legend><strong>Contato</strong></legend>
-          <img src="/assets/icons/email.png" alt="user" class="icon grid" />
-          <div>
-            <div>
-              <label for="email">Email:</label>
-              <input type="text" required />
-            </div>
-            <div>
-              <label for="tel">Telefone:</label>
-              <input type="number" />
-            </div>
-            <div>
-              <label for="cel">Celular:</label>
-              <input type="number" required />
-            </div>
-            <div>
-              <label for="skype">Skype:</label>
-              <input type="text" required />
-            </div>
-          </div>
+        <fieldset style="width: 810px">
+          <legend><b>Contato</b></legend>
+          <table>
+            <tr>
+              <td rowspan="4">
+                <img src="/assets/icons/email.png" alt="email" width="100px" />
+              </td>
+              <td>Email:</td>
+              <td>
+                <input type="text" class="caixag" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Telefone:</td>
+              <td>
+                <input type="number" class="caixap" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Celular:</td>
+              <td>
+                <input type="number" class="caixap" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Skype:</td>
+              <td>
+                <input type="text" class="caixap" required />
+              </td>
+            </tr>
+          </table>
         </fieldset>
       </div>
       <div>
-        <fieldset>
-          <img src="/assets/icons/home.png" alt="user" class="icon grid" />
-          <legend><strong>Endereço</strong></legend>
-          <div>
-            <div>
-              <label for="logra">Logradouro:</label>
-              <input type="text" required />
-            </div>
-            <div>
-              <label for="num">Número:</label>
-              <input type="number" />
-              <label for="cep">CEP:</label>
-              <input
-                type="text"
-                placeholder="Ex: 12345-11"
-                maxlength="9"
-                required
-              />
-            </div>
-            <div>
-              <label for="bairro">Bairro:</label>
-              <input type="text" required />
-              <label for="cidade">Cidade:</label>
-              <input type="text" required />
-            </div>
-            <div>
-              <label for="estado">Estado:</label>
-              <select>
-                <option value="PE">PE</option>
-                <option value="SP">SP</option>
-                <option value="MG">MG</option>
-                <option value="PR">PR</option>
-                <option value="AC">AC</option>
-                <option value="RJ">RJ</option>
-              </select>
-            </div>
-            <div>
-              <label for="complemento">Complemento:</label>
-              <input type="text" required />
-            </div>
-          </fieldset>
-          </div>
+        <fieldset style="width: 810px">
+          <legend><b>Endereço</b></legend>
+          <table>
+            <tr>
+              <td rowspan="5">
+                <img src="/assets/icons/home.png" alt="home" width="100px" />
+              </td>
+              <td>Logradouro:</td>
+              <td>
+                <input type="text" class="caixag" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Número:</td>
+              <td>
+                <input type="number" class="caixap" required />
+              </td>
+              <td>CEP:</td>
+              <td>
+                <input type="text" maxlength="9" class="caixap" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Bairro:</td>
+              <td>
+                <input type="text" class="caixap" required />
+              </td>
+              <td>Cidade:</td>
+              <td>
+                <input type="text" class="caixam" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Estado:</td>
+              <td>
+                <select>
+                  <option value="PE">PE</option>
+                  <option value="SP">SP</option>
+                  <option value="MG">MG</option>
+                  <option value="PR">PR</option>
+                  <option value="AC">AC</option>
+                  <option value="RJ">RJ</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Complemento:</td>
+              <td>
+                <input type="text" class="caixag" required />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
       </div>
-      <input type="submit" />
-      <input type="reset" />
+      <input type="submit" value="Salvar Cliente" />
+      <input type="reset" value="Limpar Dados" />
     </form>
   </body>
 </html>
